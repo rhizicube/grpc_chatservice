@@ -100,7 +100,7 @@ function callService() {
   console.log("Enter your messages below:");
 }
 
-  setTimeout(callService, timer);
+  setTimeout(callService, 5000);
 
 
 
