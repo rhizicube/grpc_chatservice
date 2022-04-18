@@ -2,17 +2,20 @@
   "name": "micro-services",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server.js",
+    "start-server": "node server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
     "@grpc/grpc-js": "^1.6.2",
     "@grpc/proto-loader": "^0.6.9",
+    "dotenv": "^16.0.0",
     "express": "^4.17.3",
-    "grpc": "^1.24.11"
+    "grpc": "^1.24.11",
+    "is-port-reachable": "^4.0.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.15"
