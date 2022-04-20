@@ -1,7 +1,7 @@
 version: '2.2'
 services:
   Allen:
-    image: grpcnew
+    image: grpc
     ports:
       - "4000:4000"
     networks:
@@ -10,8 +10,9 @@ services:
       - ADD_PORT=4000
       - FRND_PORT=5000
       - USER=Allen
+      - CONNECTION_ADD=Bob
   Bob:
-    image: grpcnew
+    image: grpc
     ports:
       - "5000:5000"
     networks:
@@ -19,7 +20,8 @@ services:
     environment:
       - ADD_PORT=5000
       - FRND_PORT=4000
-      - USER=Bob   
+      - USER=Bob 
+      - CONNECTION_ADD=Allen  
 networks:
   proxynet:
     driver: bridge
